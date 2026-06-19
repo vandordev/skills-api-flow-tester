@@ -1,0 +1,7 @@
+name: api-flow-tester
+display_name: API Flow Tester
+description: Run and maintain multi-step HTTP API test flows.
+default_prompt: Use $api-flow-tester to run, create, or update a multi-step HTTP API flow and report each step clearly.
+supported_modes: full-run,dry-run,partial-run
+trigger_phrases: run-flow,debug-flow,create-flow,update-flow,dry-run-flow,partial-run-flow
+targets: codex,claude,copilot,gemini
