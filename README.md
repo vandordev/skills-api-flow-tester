@@ -87,13 +87,21 @@ After installation, ask your agent to use `api-flow-tester` when you want to:
 
 ## Sponsors
 
-Currently sponsored by [Ozone](https://ozonedigitech.com), a software, app, integration, and automation studio.
-
-<p>
-  <a href="https://ozonedigitech.com">
-    <img src="./assets/sponsors/ozone.png" alt="Ozone logo" width="120" />
-  </a>
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="top" width="240">
+        <a href="https://ozonedigitech.com">
+          <img src="./assets/sponsors/ozone.png" alt="Ozone logo" width="120" />
+        </a>
+        <br />
+        <strong>Ozone</strong>
+        <br />
+        <span>A software, app, integration, and automation studio.</span>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Contribution
 
