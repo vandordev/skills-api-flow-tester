@@ -1,0 +1,22 @@
+# Environment-specific flow test secrets
+# Copy this to a file such as:
+# - tests/flows/customer-login/.env.local
+# - tests/flows/customer-login/.env.staging
+# - tests/flows/customer-login/.env.production
+# and optionally commit:
+# - tests/flows/customer-login/.env.example
+# or use repo-wide fallback files such as:
+# - .flow.test.local.env
+# - .flow.test.staging.env
+# - .flow.test.production.env
+# Keep the real file untracked.
+
+BASE_URL=
+OPENAPI_URL=
+ADMIN_EMAIL=
+ADMIN_PASSWORD=
+TEST_PHONE_NUMBER=
+INVALID_PHONE_NUMBER=
+OTP_CODE=
+ACCESS_TOKEN=
+REFRESH_TOKEN=
