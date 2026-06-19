@@ -87,10 +87,10 @@ After installation, ask your agent to use `api-flow-tester` when you want to:
 
 ## Sponsors
 
-Currently sponsored by [Ozone](https://www.ozonedigitech.com/en), a software, app, integration, and automation studio.
+Currently sponsored by [Ozone](https://ozonedigitech.com), a software, app, integration, and automation studio.
 
 <p>
-  <a href="https://www.ozonedigitech.com/en">
+  <a href="https://ozonedigitech.com">
     <img src="./assets/sponsors/ozone.png" alt="Ozone logo" width="120" />
   </a>
 </p>
