@@ -1,5 +1,9 @@
 # API Flow Tester
 
+<p align="center">
+  <img src="./assets/hero/hero.png" alt="API Flow Tester hero image" width="960" />
+</p>
+
 `api-flow-tester` is a reusable skill for running, debugging, creating, and updating multi-step HTTP API test flows across `Codex`, `Claude`, `Copilot`, and `Gemini`.
 
 ## Why This Exists
