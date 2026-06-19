@@ -103,6 +103,8 @@ After installation, ask your agent to use `api-flow-tester` when you want to:
   </table>
 </div>
 
+If you want to sponsor this project, contact Alfarizi at [rizal.alfariiiziii@gmail.com](mailto:rizal.alfariiiziii@gmail.com).
+
 ## Contribution
 
 ### Platform Outputs
