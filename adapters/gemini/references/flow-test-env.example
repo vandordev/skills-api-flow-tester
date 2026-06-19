@@ -1,4 +1,5 @@
 # Environment-specific flow test secrets
+# Commit this as tests/flows/<flow-name>/.env.example for every new secret-backed flow.
 # Copy this to a file such as:
 # - tests/flows/customer-login/.env.local
 # - tests/flows/customer-login/.env.staging

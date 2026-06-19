@@ -19,3 +19,7 @@ grep -q '^supported_modes: full-run,dry-run,partial-run$' "$ROOT/core/metadata.y
 grep -q '^## Running a Flow$' "$ROOT/core/SKILL.md"
 grep -q '^## Partial Run Rules$' "$ROOT/core/SKILL.md"
 grep -q '^## Failure Handling$' "$ROOT/core/SKILL.md"
+grep -q 'If you create a new flow at `tests/flows/<flow-name>/flow.md`, also create `tests/flows/<flow-name>/.env.example`.' "$ROOT/core/SKILL.md"
+grep -q 'The `.env.example` file is required for new secret-backed flows and must list every placeholder-backed input with blank or example-safe values only.' "$ROOT/core/SKILL.md"
+grep -q '^# Commit this as tests/flows/<flow-name>/.env.example for every new secret-backed flow\.$' "$ROOT/core/references/flow-test-env.example"
+grep -q '^# Pair this flow with `.env.example` in the same flow directory when you create a new secret-backed flow\.$' "$ROOT/core/references/example-flow.md"

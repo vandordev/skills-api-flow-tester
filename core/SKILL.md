@@ -53,6 +53,8 @@ Use `{{variable_name}}` placeholders in later steps. Read [references/example-fl
 
 For secret-backed flows, also read [references/flow-test-env.example](./references/flow-test-env.example). For OTP or phone-based login flows, read [references/example-otp-flow.md](./references/example-otp-flow.md). For explicit negative-test patterns, read [references/example-negative-flow.md](./references/example-negative-flow.md).
 
+If you create a new flow at `tests/flows/<flow-name>/flow.md`, also create `tests/flows/<flow-name>/.env.example`.
+
 Supported expectation patterns:
 
 - `Status`
@@ -91,6 +93,7 @@ Default secret file names to propose:
 When editing repo files:
 
 - Keep only placeholders in committed flow files.
+- The `.env.example` file is required for new secret-backed flows and must list every placeholder-backed input with blank or example-safe values only.
 - Never replace placeholders with real secrets in the saved flow file.
 - If the repo lacks an ignored local secret source, propose one and ask before creating it.
 - If needed, suggest adding the local secret file path to `.gitignore` before writing credentials there.
@@ -203,10 +206,11 @@ When the user asks to run only part of the flow:
 1. Inspect the current API reference and any related existing flows.
 2. Draft the flow using the documented format from the example reference.
 3. Keep the flow definition environment-agnostic when the same flow will run against multiple targets.
-4. If the user asked for an edit, summarize the intended changes before writing.
-5. If the flow needs credentials, phone numbers, OTPs, or other sensitive values, keep them as placeholders and define how they will be provided at runtime through `.env.<environment>` files.
-6. Ask for approval before saving any new or modified flow file.
-7. After approval, write the file and optionally run it.
+4. If the new flow uses secret-backed or environment-backed placeholders, create a sibling `.env.example` file in the same flow directory and include every required placeholder-backed key with blank or example-safe values only.
+5. If the user asked for an edit, summarize the intended changes before writing.
+6. If the flow needs credentials, phone numbers, OTPs, or other sensitive values, keep them as placeholders and define how they will be provided at runtime through `.env.<environment>` files.
+7. Ask for approval before saving any new or modified flow file.
+8. After approval, write the file and optionally run it.
 
 Never invent request or response fields when the spec or code does not support them. Mark assumptions clearly.
 

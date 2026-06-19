@@ -1,5 +1,7 @@
 # Flow: Auth Login
 
+# Pair this flow with `.env.example` in the same flow directory when you create a new secret-backed flow.
+
 **Base URL:** {{BASE_URL}}
 **OpenAPI URL:** {{OPENAPI_URL}}
 **Description:** Login, capture auth data, then fetch the current user profile.
