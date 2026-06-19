@@ -37,7 +37,59 @@ The normal authoring flow is:
 - `adapters/copilot/`: `copilot-instructions.md` and shared references
 - `adapters/gemini/`: `GEMINI.md` and shared references
 
-Platform-specific installation notes live in:
+## Installation
+
+Installation differs by harness. If you use more than one, install `api-flow-tester` separately for each one.
+
+### Codex
+
+- Copy `adapters/codex/` into your Codex skills directory as `api-flow-tester/`.
+- Keep `SKILL.md`, `agents/openai.yaml`, and `references/` together.
+- Restart or reload Codex so the skill is rediscovered.
+
+Tell Codex:
+
+```text
+Fetch and follow installation instructions from https://raw.githubusercontent.com/vandordev/skills-api-flow-tester/refs/heads/main/docs/install-codex.md
+```
+
+### Claude
+
+- Copy `adapters/claude/CLAUDE.md` and `adapters/claude/references/` into the instruction location you use for Claude.
+- Preserve the relative layout so `CLAUDE.md` and `references/` stay together.
+- Restart or reload the Claude session before use.
+
+Tell Claude:
+
+```text
+Fetch and follow installation instructions from https://raw.githubusercontent.com/vandordev/skills-api-flow-tester/refs/heads/main/docs/install-claude.md
+```
+
+### Copilot
+
+- Copy `adapters/copilot/copilot-instructions.md` and `adapters/copilot/references/` into the custom-instructions location you use for Copilot.
+- Preserve the relative layout so the references remain available beside the instruction file.
+- Reload the editor window before use.
+
+Tell Copilot:
+
+```text
+Fetch and follow installation instructions from https://raw.githubusercontent.com/vandordev/skills-api-flow-tester/refs/heads/main/docs/install-copilot.md
+```
+
+### Gemini
+
+- Copy `adapters/gemini/GEMINI.md` and `adapters/gemini/references/` into the instruction location you use for Gemini.
+- Preserve the file name `GEMINI.md`.
+- Refresh or restart Gemini before use.
+
+Tell Gemini:
+
+```text
+Fetch and follow installation instructions from https://raw.githubusercontent.com/vandordev/skills-api-flow-tester/refs/heads/main/docs/install-gemini.md
+```
+
+Detailed installation notes live in:
 
 - `docs/install-codex.md`
 - `docs/install-claude.md`
