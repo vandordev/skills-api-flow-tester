@@ -1,0 +1,67 @@
+name: Feature request
+description: Suggest a new capability, adapter, packaging flow, or user-facing improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a new capability or improvement for `api-flow-tester`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What problem are you trying to solve?
+      placeholder: It is hard to install the skill into another harness without repeating manual steps.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the improvement you want.
+      placeholder: Add a generated install artifact for ...
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Main impact area
+      options:
+        - Installation
+        - Skill behavior
+        - Adapters
+        - Documentation
+        - Testing and validation
+        - Packaging and distribution
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: harness
+    attributes:
+      label: Related harness
+      options:
+        - All
+        - Codex
+        - Claude
+        - Copilot
+        - Gemini
+        - None
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds or alternatives have you considered?
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add links, examples, or references that support the request.
+    validations:
+      required: false

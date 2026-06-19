@@ -1,0 +1,69 @@
+name: Skill improvement
+description: Propose a workflow, prompt, docs, or adapter improvement that is specific to the skill itself
+title: "[Skill]: "
+labels:
+  - skill
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for improvements to the skill workflow, prompt design, examples, references, or cross-harness behavior.
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current skill behavior
+      description: What does the skill do today that you want to improve?
+      placeholder: The skill explains dry-run behavior, but the examples do not show enough variation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed improvement
+      description: Describe the exact behavior, guidance, or artifact you want changed.
+      placeholder: Add an example flow that demonstrates partial runs with env-backed placeholders.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Improvement category
+      options:
+        - Workflow logic
+        - Trigger wording
+        - Flow examples
+        - Secret handling guidance
+        - Adapter parity
+        - Install experience
+        - Documentation clarity
+        - Test coverage
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: harness_scope
+    attributes:
+      label: Harness scope
+      options:
+        - All harnesses
+        - Codex only
+        - Claude only
+        - Copilot only
+        - Gemini only
+        - Not harness-specific
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: What would success look like?
+      placeholder: A user can install and invoke the skill with less ambiguity, and the docs show one clear path.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Add any links, issue references, examples, or screenshots.
+    validations:
+      required: false

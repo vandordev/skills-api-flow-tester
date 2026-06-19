@@ -1,0 +1,80 @@
+name: Bug report
+description: Report a problem with installation, adapters, sync, validation, parity checks, or skill behavior
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to report a reproducible problem in `api-flow-tester`.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the problem clearly and concisely.
+      placeholder: Validation fails even though the generated adapters are unchanged.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installation
+        - Core skill behavior
+        - Codex adapter
+        - Claude adapter
+        - Copilot adapter
+        - Gemini adapter
+        - Sync script
+        - Validation script
+        - Parity check
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact steps, commands, or prompts used.
+      placeholder: |
+        1. Run `bash scripts/sync.sh`
+        2. Run `bash scripts/validate.sh`
+        3. See error ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: Validation should pass with a clean repository state.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: Validation fails with ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Share relevant details such as OS, shell, target harness, and command output context.
+      placeholder: |
+        OS: macOS 15
+        Shell: zsh
+        Harness: Codex
+        Command: bash tests/test_repo.sh
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add logs, screenshots, links, or anything else that helps.
+    validations:
+      required: false
