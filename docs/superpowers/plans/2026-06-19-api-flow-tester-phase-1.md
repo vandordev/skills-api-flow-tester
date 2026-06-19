@@ -44,7 +44,7 @@
 - Create: `core/references/flow-test-env.example`
 - Create: `tests/test_core_assets.sh`
 
-- [ ] **Step 1: Write the failing core-assets test**
+- [x] **Step 1: Write the failing core-assets test**
 
 ```bash
 #!/usr/bin/env bash
@@ -70,12 +70,12 @@ grep -q '^## Partial Run Rules$' "$ROOT/core/SKILL.md"
 grep -q '^## Failure Handling$' "$ROOT/core/SKILL.md"
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `bash tests/test_core_assets.sh`
 Expected: failure on the first missing file check because `core/` has not been created yet.
 
-- [ ] **Step 3: Write the minimal canonical implementation**
+- [x] **Step 3: Write the minimal canonical implementation**
 
 Create the directories:
 
@@ -116,12 +116,12 @@ Create `tests/test_core_assets.sh` from Step 1 and mark it executable:
 chmod +x tests/test_core_assets.sh
 ```
 
-- [ ] **Step 4: Run the test to verify it passes**
+- [x] **Step 4: Run the test to verify it passes**
 
 Run: `bash tests/test_core_assets.sh`
 Expected: no output and exit code `0`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add core tests/test_core_assets.sh
@@ -155,7 +155,7 @@ git commit -m "feat: add canonical api-flow-tester core assets"
 - Create: `adapters/gemini/references/example-otp-flow.md`
 - Create: `adapters/gemini/references/flow-test-env.example`
 
-- [ ] **Step 1: Write the failing sync test**
+- [x] **Step 1: Write the failing sync test**
 
 ```bash
 #!/usr/bin/env bash
@@ -186,12 +186,12 @@ for adapter in codex claude copilot gemini; do
 done
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `bash tests/test_sync.sh`
 Expected: failure because `scripts/sync.sh` does not exist yet.
 
-- [ ] **Step 3: Write the minimal sync implementation**
+- [x] **Step 3: Write the minimal sync implementation**
 
 Create `scripts/sync.sh`:
 
@@ -287,12 +287,12 @@ Create `tests/test_sync.sh` from Step 1 and mark both files executable:
 chmod +x scripts/sync.sh tests/test_sync.sh
 ```
 
-- [ ] **Step 4: Run the test to verify it passes**
+- [x] **Step 4: Run the test to verify it passes**
 
 Run: `bash tests/test_sync.sh`
 Expected: `Synced 4 adapters for api-flow-tester` and exit code `0`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add adapters scripts/sync.sh tests/test_sync.sh
@@ -305,7 +305,7 @@ git commit -m "feat: generate multi-agent adapters from core"
 - Create: `scripts/validate.sh`
 - Create: `tests/test_validate.sh`
 
-- [ ] **Step 1: Write the failing validation test**
+- [x] **Step 1: Write the failing validation test**
 
 ```bash
 #!/usr/bin/env bash
@@ -329,12 +329,12 @@ fi
 grep -q 'unresolved marker' /tmp/validate-poisoned.log
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `bash tests/test_validate.sh`
 Expected: failure because `scripts/validate.sh` does not exist yet.
 
-- [ ] **Step 3: Write the minimal validation implementation**
+- [x] **Step 3: Write the minimal validation implementation**
 
 Create `scripts/validate.sh`:
 
@@ -397,12 +397,12 @@ Create `tests/test_validate.sh` from Step 1 and mark both files executable:
 chmod +x scripts/validate.sh tests/test_validate.sh
 ```
 
-- [ ] **Step 4: Run the test to verify it passes**
+- [x] **Step 4: Run the test to verify it passes**
 
 Run: `bash tests/test_validate.sh`
 Expected: `validation ok` on the clean tree, then a failing poisoned run that is caught by the test.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/validate.sh tests/test_validate.sh
@@ -420,7 +420,7 @@ git commit -m "feat: add repository validation checks"
 - Create: `scripts/check-parity.sh`
 - Create: `tests/test_parity.sh`
 
-- [ ] **Step 1: Write the failing parity test**
+- [x] **Step 1: Write the failing parity test**
 
 ```bash
 #!/usr/bin/env bash
@@ -442,12 +442,12 @@ grep -q 'hash mismatch' /tmp/parity-drift.log
 git checkout -- "$ROOT/adapters/gemini/GEMINI.md"
 ```
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `bash tests/test_parity.sh`
 Expected: failure because `scripts/check-parity.sh` and the docs do not exist yet.
 
-- [ ] **Step 3: Write the compatibility and install documents plus parity implementation**
+- [x] **Step 3: Write the compatibility and install documents plus parity implementation**
 
 Create `docs/compatibility-contract.md`:
 
@@ -565,12 +565,12 @@ Create `tests/test_parity.sh` from Step 1 and mark both files executable:
 chmod +x scripts/check-parity.sh tests/test_parity.sh
 ```
 
-- [ ] **Step 4: Run the test to verify it passes**
+- [x] **Step 4: Run the test to verify it passes**
 
 Run: `bash tests/test_parity.sh`
 Expected: `parity ok` on the clean tree, then a failing second parity run that is caught by the test after the adapter file is modified.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add docs scripts/check-parity.sh tests/test_parity.sh
@@ -583,7 +583,7 @@ git commit -m "feat: add adapter parity checks and install docs"
 - Create: `tests/test_repo.sh`
 - Create: `scripts/test.sh`
 
-- [ ] **Step 1: Write the failing end-to-end test runner check**
+- [x] **Step 1: Write the failing end-to-end test runner check**
 
 ```bash
 #!/usr/bin/env bash
@@ -596,12 +596,12 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 Save this as `tests/test_repo.sh`.
 
-- [ ] **Step 2: Run the test to verify it fails**
+- [x] **Step 2: Run the test to verify it fails**
 
 Run: `bash tests/test_repo.sh`
 Expected: failure because `scripts/test.sh` does not exist yet.
 
-- [ ] **Step 3: Write the minimal repo test runner**
+- [x] **Step 3: Write the minimal repo test runner**
 
 Create `scripts/test.sh`:
 
@@ -625,7 +625,7 @@ Make the new scripts executable:
 chmod +x scripts/test.sh tests/test_repo.sh
 ```
 
-- [ ] **Step 4: Run the full verification suite**
+- [x] **Step 4: Run the full verification suite**
 
 Run these commands in order:
 
@@ -645,7 +645,7 @@ Expected:
 - `parity ok`
 - only the expected tracked files appear before the final commit
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/test.sh tests/test_repo.sh
