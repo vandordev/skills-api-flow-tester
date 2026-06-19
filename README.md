@@ -1,4 +1,4 @@
-# skills-api-flow-tester
+# API Flow Tester
 
 `api-flow-tester` is a reusable skill for running, debugging, creating, and updating multi-step HTTP API test flows across `Codex`, `Claude`, `Copilot`, and `Gemini`.
 
