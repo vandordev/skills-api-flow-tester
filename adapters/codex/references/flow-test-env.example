@@ -1,5 +1,9 @@
 # Environment-specific flow test secrets
 # Commit this as tests/flows/<flow-name>/.env.example for every new secret-backed flow.
+# Keep real secret files such as `.env`, `.env.local`, `.env.staging`, and `.env.production` ignored by git.
+# Do not ignore `.env.example`; it should stay safe to commit.
+# Keep every value blank or obviously safe; do not place real or secret-like example values here.
+# If keys change in real secret files, update this file in the same change so it stays in sync.
 # Copy this to a file such as:
 # - tests/flows/customer-login/.env.local
 # - tests/flows/customer-login/.env.staging
