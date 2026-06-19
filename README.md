@@ -85,21 +85,33 @@ After installation, ask your agent to use `api-flow-tester` when you want to:
 - create a reusable flow from an endpoint sequence
 - update a flow after API contract changes
 
-## Platform Outputs
+## Sponsors
+
+Currently sponsored by [Ozone](https://www.ozonedigitech.com/en), a software, app, integration, and automation studio.
+
+<p>
+  <a href="https://www.ozonedigitech.com/en">
+    <img src="./assets/sponsors/ozone.png" alt="Ozone logo" width="120" />
+  </a>
+</p>
+
+## Contribution
+
+### Platform Outputs
 
 - `adapters/codex/`: `SKILL.md`, `agents/openai.yaml`, and shared references
 - `adapters/claude/`: `CLAUDE.md` and shared references
 - `adapters/copilot/`: `copilot-instructions.md` and shared references
 - `adapters/gemini/`: `GEMINI.md` and shared references
 
-## Detailed Install Docs
+### Detailed Install Docs
 
 - `docs/install-codex.md`
 - `docs/install-claude.md`
 - `docs/install-copilot.md`
 - `docs/install-gemini.md`
 
-## Repository Layout
+### Repository Layout
 
 - `core/`: the canonical workflow, metadata, and shared references
 - `adapters/`: rendered platform-specific outputs
@@ -107,7 +119,7 @@ After installation, ask your agent to use `api-flow-tester` when you want to:
 - `tests/`: shell checks for phase 1 repository behavior
 - `docs/`: install guides, compatibility contract, design, and implementation plan
 
-## Working Model
+### Working Model
 
 Edit the skill in `core/`. Do not edit generated adapter files by hand unless you are debugging the generator.
 
@@ -119,7 +131,7 @@ The normal authoring flow is:
 4. Run `bash scripts/check-parity.sh`.
 5. Run `bash tests/test_repo.sh`.
 
-## Entry Points
+### Entry Points
 
 - `bash scripts/sync.sh`: regenerate all platform adapters from `core/`
 - `bash scripts/validate.sh`: verify required files, metadata, and unresolved markers
